@@ -17,5 +17,5 @@ for article in content['articles']:
     if article["title"] is not None:
         body = body + article["title"] + "\n" + article["description"] + 2*"\n"
 
-body = body.encode("utf-8")
+body = body.encode("utf-8")  #convert the body incase of error
 send_email(message=body)
